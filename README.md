@@ -92,7 +92,7 @@ Access main page at:
 ---
 
 > ⚠️ **NOTE**: Experimental job-batching features of [Laravel 10.0 - Queues](https://laravel.com/docs/10.x/queues#job-batching).
-- Real-time fetch are using simple pole with JavaScript. Websockets are not implemented.
+- Real-time fetch are using simple poll with JavaScript. Websockets are not implemented.
 - Application are not tested using any unit test.
 
 ---
