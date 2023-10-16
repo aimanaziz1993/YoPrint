@@ -130,8 +130,8 @@
 
                 var html = batches.map((b, k) => {
 
-                    let status = "Processing";
-                    let badgeClass = "bg-slate-200 text-slate-800";
+                    let status = "Pending";
+                    let badgeClass = "bg-yellow-200 text-yellow-800";
 
                     if (!b.cancelledAt && b.failedJobs > 0 && b.totalJobs - b.pendingJobs < b.totalJobs) {
                         badgeClass = "bg-red-200 text-red-800";
@@ -143,8 +143,8 @@
                         badgeClass = "bg-orange-200 text-orange-800";
                         status = 'Cancelled'
                     } else if (!b.cancelledAt && b.pendingJobs > 0 && !b.failedJobs) {
-                        badgeClass = "bg-yellow-200 text-yellow-800";
-                        status = 'Pending'
+                        badgeClass = "bg-slate-200 text-slate-800";
+                        status = 'Processing'
                     }
 
                     return `
