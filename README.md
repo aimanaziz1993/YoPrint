@@ -81,13 +81,17 @@ Serving Horizon Dashboard:
 $ php artisan horizon
 ```
 
+Access Horizon dashboard:
+
+`http://127.0.0.1:8000/horizon`
+
 Access main page at:
 
-`http://localhost:8000` or `http://127.0.0.1:8000`
+`http://127.0.0.1:8000`
 
 ---
 
-> ⚠️ **NOTE**: Experimental job & batch features of [Laravel Queues](https://laravel.com/docs/10.x/queues#job-batching).
+> ⚠️ **NOTE**: Experimental job-batching features of [Laravel 10.0 - Queues](https://laravel.com/docs/10.x/queues#job-batching).
 - Real-time fetch are using simple pole with JavaScript. Websockets are not implemented.
 - Application are not tested using any unit test.
 
