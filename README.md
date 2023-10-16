@@ -104,7 +104,7 @@ Access main page at:
 - Redis server
 - Drag and drop multiple **CSV only** files upload. Using [Dropzone](https://github.com/dropzone/dropzone)
 - Auto queue with job batches
-- Max file size: `50MB`
+- Max file size of PHP settings: `50MB`
   - Chunked uploads (upload large files in smaller chunks)
 - History of all recent uploaded files
 - Upload same file multiple times without duplicating entries.
