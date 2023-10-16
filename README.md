@@ -1,67 +1,106 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<img width="1440" alt="YoPrint" src="https://github.com/aimanaziz1993/YoPrint/assets/43428455/e4e6656c-38f2-487e-9565-80ec32670299">
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+The application's primary functionality involves allowing users to upload CSV files into the
+system. Once uploaded, the system processes the files in the background. 
 
-## About Laravel
+Users are then notified when the processing is complete. Additionally, the application provides users with a
+history of all file uploads.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<div align="center">
+  <img width="1440" alt="YoPrint" src="https://github.com/aimanaziz1993/YoPrint/assets/43428455/e4e6656c-38f2-487e-9565-80ec32670299">
+</div>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Quickstart
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Install with **Composer** and **NPM**:
 
-## Learning Laravel
+```bash
+$ git clone https://github.com/aimanaziz1993/YoPrint.git
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+$ composer install && npm install
+```
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Setting up **Environment**:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+```bash
+$ cp .env.example .env
+$ php artisan key:generate
+```
 
-## Laravel Sponsors
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=yoprint
+DB_USERNAME=root
+DB_PASSWORD=
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+BROADCAST_DRIVER=log
+CACHE_DRIVER=redis
+FILESYSTEM_DISK=local
+QUEUE_CONNECTION=redis
+SESSION_DRIVER=file
+SESSION_LIFETIME=120
 
-### Premium Partners
+MEMCACHED_HOST=127.0.0.1
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+REDIS_CLIENT=predis
+REDIS_HOST=127.0.0.1
+REDIS_PASSWORD=null
+REDIS_PORT=6379
+```
 
-## Contributing
+Install **Redis on macOS**:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+[👉 Checkout Redis docs](https://redis.io/docs/getting-started/installation/install-redis-on-mac-os/)
 
-## Code of Conduct
+## Horizon Installation
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Documentation for Horizon can be found on the [Laravel website](https://laravel.com/docs/horizon).
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Running on Localhost
 
-## License
+Serving Laravel locally:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-# YoPrint
+```bash
+$ php artisan migrate
+$ php artisan serve
+```
+
+Serving Vite:
+
+```bash
+$ npm run dev
+```
+
+Serving Horizon Dashboard:
+
+```bash
+$ php artisan horizon
+```
+
+Access main page at:
+
+`http://localhost:8000` or `http://127.0.0.1:8000`
+
+---
+
+> ⚠️ **NOTE**: Experimental job & batch features of [Laravel Queues](https://laravel.com/docs/10.x/queues#job-batching).
+- Real-time fetch are using simple pole with JavaScript. Websockets are not implemented.
+- Application are not tested using any unit test.
+
+---
+
+## Main features ✅
+
+- Laravel 10.0
+- Laravel Horizon
+- Redis server
+- Drag and drop multiple **CSV only** files upload. Using [Dropzone](https://github.com/dropzone/dropzone)
+- Auto queue with job batches
+- Max file size: `50MB`
+  - Chunked uploads (upload large files in smaller chunks)
+- History of all recent uploaded files
+- Upload same file multiple times without duplicating entries.

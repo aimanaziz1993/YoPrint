@@ -83,8 +83,6 @@
             var tableBody = document.getElementById('filesBody');
 
             Dropzone.options.uploadForm = {
-                // previewsContainer: ".dropzone-previews",
-                // previewTemplate: document.getElementById('preview-template').innerHTML,
                 url: "{{ route('api.upload') }}",
                 autoQueue: true,
                 autoProcessQueue: true,
@@ -92,8 +90,6 @@
                 parallelUploads: 1,
                 maxFiles: 10,
                 acceptedFiles: 'text/csv',
-                // previewTemplate: "#previews",
-                // previewsContainer: "#previews",
                 dictDefaultMessage: "Select file / Drag and drop",
                 dictFallbackMessage: "Your browser does not support drag'n'drop file uploads.",
                 init: function() {
