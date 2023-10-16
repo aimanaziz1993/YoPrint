@@ -1,4 +1,4 @@
-<img alt="YoPrint" src="https://github.com/aimanaziz1993/YoPrint/assets/43428455/9e7e66de-2262-4761-8b79-fe38d7ff1052" />
+<img width="320" alt="YoPrint" src="https://github.com/aimanaziz1993/YoPrint/assets/43428455/9e7e66de-2262-4761-8b79-fe38d7ff1052" />
 
 The application's primary functionality involves allowing users to upload CSV files into the
 system. Once uploaded, the system processes the files in the background. 
