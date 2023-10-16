@@ -149,19 +149,19 @@
 
                     return `
                         <tr>
-                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-center">
                                 ${k + 1}
                             </td>
-                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-center">
                                 ${new Date(b.createdAt).toLocaleString() }
                                 &nbsp;
                                 ( ${ timeSince(new Date(b.createdAt)) } ago )
                             </td>
-                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-center">
                                 ${b.name || b.id}
                             </td>
-                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                                <div class="flex flex-row items-center justify-between">
+                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200 text-center">
+                                <div class="flex flex-row items-center justify-around">
                                     <div class="text-xs text-center px-3 rounded-full ${badgeClass}">
                                         ${status || ""}
                                     </div>
