@@ -107,4 +107,8 @@ Access main page at:
 - Max file size of PHP settings: `50MB`
   - Chunked uploads (upload large files in smaller chunks)
 - History of all recent uploaded files
-- Upload same file multiple times without duplicating entries.
+- Clean non-UTF-8 character before DB transactions
+- Upload same file multiple times without duplicating entries
+- Tested files:
+    - Initial File Upload: (https://drive.google.com/file/d/1O6U1fCjbHpiDesQMTZA5nm8hMmya0BsF/view?usp=sharing)
+    - Upsert File Upload: (https://drive.google.com/file/d/1CYLO8tw-wa0vXV20fSIq8AqrFCb2klf9/view?usp=sharing).
